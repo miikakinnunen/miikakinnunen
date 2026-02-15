@@ -10,7 +10,7 @@ Below are nutshell versions of my work that are already migrated. While source c
 - **Backend:** Django, Node.js (Express), RESTful API Design, WebSockets, Celery
 - **Frontend:** Vue.js, React,  SPAs, State Management, HTML5, CSS3, Tailwind CSS
 - **Databases & Messaging:** PostgreSQL, MySQL, SQLite, RabbitMQ, Relational Data Modeling
-- **DevOps & Platform:** Docker, CI/CD pipelines, Linux, Kubernetes, Helm, ArgoCD, Vagrant, Ansible
+- **DevOps & Platform:** Docker, IaC, CI/CD pipelines, Linux, Kubernetes, Helm, ArgoCD, Vagrant, Ansible
 - **Quality & Metrics:** Prometheus, Grafana, ELK, PyTest, Jest, k6, Locust
 - **Security & Identity:** JWT (refresh token rotation), TLS, OAuth2, 2FA, RBAC, rate limiting
 
