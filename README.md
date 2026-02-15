@@ -2,7 +2,7 @@
 
 Projects I have developed are currently hosted on a private Gitea instance. I am in the process of migrating and streamlining these for GitHub to ensure they are in a suitable form for public showcase.
 
-Below are nutshell versions of my work that are already migrated. While source code repositories are currently private for privacy reasons, i am happy to provide access upon request.
+Below is a brief overview of selected projects that have already been migrated. While source code repositories are currently private for privacy reasons, i am happy to provide access upon request.
 
 ## Technical Skills
 
@@ -10,7 +10,7 @@ Below are nutshell versions of my work that are already migrated. While source c
 - **Backend:** Django, Node.js (Express), RESTful API Design, WebSockets, Celery
 - **Frontend:** Vue.js, React,  SPAs, State Management, HTML5, CSS3, Tailwind CSS
 - **Databases & Messaging:** PostgreSQL, MySQL, SQLite, RabbitMQ, Relational Data Modeling
-- **DevOps & Platform:** Docker, IaC, CI/CD pipelines, Linux, Kubernetes, Helm, ArgoCD, Vagrant, Ansible
+- **DevOps & Platform:** Docker, Infrastructure as Code (IaC), CI/CD pipelines, Linux, Kubernetes, Helm, ArgoCD, Vagrant, Ansible
 - **Quality & Metrics:** Prometheus, Grafana, ELK, PyTest, Jest, k6, Locust
 - **Security & Identity:** JWT (refresh token rotation), TLS, OAuth2, 2FA, RBAC, rate limiting
 
@@ -19,7 +19,7 @@ Below are nutshell versions of my work that are already migrated. While source c
 
 ### E-commerce platform
 
-A production-style e-commerce platform designed and implemented from the ground up. It models a production-style commerce system, covering secure authentication, catalog management, transactional checkout, asynchronous payment processing, administrative tooling, and operational considerations such as background task processing and load testing.
+A full-stack e-commerce platform designed and implemented from the ground up, modeling a production-oriented commerce system with secure authentication, transactional checkout, asynchronous payment processing, and administrative tooling.
 
 **Tech Stack**
 
@@ -34,7 +34,7 @@ A production-style e-commerce platform designed and implemented from the ground 
 - Stateless JWT authentication with access/refresh token rotation
 - Optional 2FA and OAuth login
 - ACID-compliant checkout flow with inventory reservation logic
-- Stripe payment integration using Payment Intents (sandbox)
+- Stripe Payment Intents integration (Sandbox mode)
 - Asynchronous webhook handling via RabbitMQ
 - Background task processing with Celery
 - Role-based access control (RBAC) for admin operations
