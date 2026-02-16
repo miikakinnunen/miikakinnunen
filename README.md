@@ -49,6 +49,7 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
 - WCAG 2.1 Level A accessibility compliance
 - SEO best practices applied
 
+---
 
 ### Next to be migrated... 
 
