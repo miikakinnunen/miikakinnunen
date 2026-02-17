@@ -7,10 +7,10 @@ Below is a brief overview of selected projects that have already been migrated. 
 ## Technical Skills
 
 - **Languages:** Python, JavaScript (ES6+), TypeScript, Go, SQL
-- **Backend:** Django, Node.js (Express), RESTful API Design, WebSockets, Celery
+- **Backend:** Django, Node.js (Express), RESTful API Design, WebSockets, Celery, Redis
 - **Frontend:** Vue.js, React,  SPAs, State Management, HTML5, CSS3, Tailwind CSS
 - **Databases & Messaging:** PostgreSQL, MySQL, SQLite, RabbitMQ, Relational Data Modeling
-- **DevOps & Platform:** Docker, Infrastructure as Code (IaC), CI/CD pipelines, Linux, Kubernetes, Helm, ArgoCD, Vagrant, Ansible
+- **DevOps & Platform:** Docker, Infrastructure as Code (IaC), Nginx, CI/CD pipelines, Linux, Kubernetes, Helm, ArgoCD, Vagrant, Ansible
 - **Quality & Metrics:** Prometheus, Grafana, ELK, PyTest, Jest, k6, Locust
 - **Security & Identity:** JWT (refresh token rotation), TLS, OAuth2, 2FA, RBAC, rate limiting
 
