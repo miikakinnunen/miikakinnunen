@@ -21,6 +21,18 @@ Below is a brief overview of selected projects that have already been migrated. 
 
 A full-stack e-commerce platform designed and implemented from the ground up, modeling a production-oriented commerce system with secure authentication, transactional checkout, asynchronous payment processing, and administrative tooling.
 
+<details>
+    <summary><strong>Click to open a few preview images</strong></summary>
+    <img src="./media/entrypage.png" width="300" alt="Thumbnail" />
+    <img src="./media/default_nav.png" width="300" alt="Thumbnail" />
+    <img src="./media/fantasy_with_price_filtering.png" width="300" alt="Thumbnail" />
+    <img src="./media/book_details.png" width="300" alt="Thumbnail" />
+    <img src="./media/cart_view.png" width="300" alt="Thumbnail" />
+    <img src="./media/checkout_view.png" width="300" alt="Thumbnail" />
+</details>
+<p></p>
+
+
 **Tech Stack**
 
 * Backend: Python, Django
@@ -48,6 +60,8 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
 - Transaction and stress testing for checkout consistency
 - WCAG 2.1 Level A accessibility compliance
 - SEO best practices applied
+
+
 
 ---
 
