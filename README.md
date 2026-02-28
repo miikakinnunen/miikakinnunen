@@ -65,19 +65,32 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
 
 ---
 
-### Next to be migrated... 
-
 ### Interest-Based Geospatial Matching Platform
 
 A full-stack recommendation system built with Go and React, connecting users through a custom weighted matching algorithm and geospatial proximity filtering. The platform combines strict access control, prioritized recommendations, and real-time communication.
 
+<details>
+    <summary><strong>Click to open a few preview images</strong></summary>
+    <img src="./media/gm1.png" width="300" alt="Thumbnail" />
+    <img src="./media/gm2.png" width="300" alt="Thumbnail" />
+    <img src="./media/gm3.png" width="300" alt="Thumbnail" />
+    <img src="./media/gm4.png" width="300" alt="Thumbnail" />
+    <img src="./media/gm5.png" width="300" alt="Thumbnail" />
+    <img src="./media/gm6.png" width="300" alt="Thumbnail" />
+    <img src="./media/gm7.png" width="300" alt="Thumbnail" />
+    <img src="./media/gm8.png" width="300" alt="Thumbnail" />
+    <img src="./media/gm9.png" width="300" alt="Thumbnail" />
+</details>
+<p></p>
+
 **Tech Stack**
 
-* Backend: Go, GraphQL (gqlgen), REST
-* Frontend: React 18 (JavaScript)
-* Database & Geospatial: PostgreSQL (earthdistance)
+* Backend: Go, GraphQL
+* Frontend: React (JavaScript)
+* Database: PostgreSQL with `cube` + `earthdistance` extensions
 * Real-time: WebSockets (GraphQL subscriptions + chat channel)
 * Security: JWT, brcypt
+* Containerization: Docker + Docker Compose
 
 **Highlights**
 
@@ -86,6 +99,7 @@ A full-stack recommendation system built with Go and React, connecting users thr
 - Radius-based proximity filtering via PostgreSQL `earthdistance`
 - WebSocket-powered real-time chat with typing indicators and unread tracking
 - Connection-based profile visibility and strict authorization boundaries
+- Accessibility practices applied throughout the UI
 
 
 
