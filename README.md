@@ -23,15 +23,15 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
 
 <details>
     <summary><strong>Click to open a few preview images</strong></summary>
-    <img src="./media/bs1.png" width="300" alt="Thumbnail" />
-    <img src="./media/bs2.png" width="300" alt="Thumbnail" />
-    <img src="./media/bs3.png" width="300" alt="Thumbnail" />
-    <img src="./media/bs4.png" width="300" alt="Thumbnail" />
-    <img src="./media/bs5.png" width="300" alt="Thumbnail" />
-    <img src="./media/bs6.png" width="300" alt="Thumbnail" />
-    <img src="./media/bs7.png" width="300" alt="Thumbnail" />
-    <img src="./media/bs8.png" width="300" alt="Thumbnail" />
-    <img src="./media/bs9.png" width="300" alt="Thumbnail" />
+    <img src="./media/entry_page.png" width="300" alt="Thumbnail" />
+    <img src="./media/category_and_price_filtering.png" width="300" alt="Thumbnail" />
+    <img src="./media/book_details_and_reviews.png" width="300" alt="Thumbnail" />
+    <img src="./media/cart+cartcomponent+suggests.png" width="300" alt="Thumbnail" />
+    <img src="./media/checkoutview.png" width="300" alt="Thumbnail" />
+    <img src="./media/paymentpending.png" width="300" alt="Thumbnail" />
+    <img src="./media/myorders.png" width="300" alt="Thumbnail" />
+    <img src="./media/adminfeatures.png" width="300" alt="Thumbnail" />
+    <img src="./media/admin_order_management.png" width="300" alt="Thumbnail" />
 </details>
 <p></p>
 
