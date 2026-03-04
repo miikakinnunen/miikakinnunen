@@ -23,12 +23,15 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
 
 <details>
     <summary><strong>Click to open a few preview images</strong></summary>
-    <img src="./media/entrypage.png" width="300" alt="Thumbnail" />
-    <img src="./media/default_nav.png" width="300" alt="Thumbnail" />
-    <img src="./media/fantasy_with_price_filtering.png" width="300" alt="Thumbnail" />
-    <img src="./media/book_details.png" width="300" alt="Thumbnail" />
-    <img src="./media/cart_view.png" width="300" alt="Thumbnail" />
-    <img src="./media/checkout_view.png" width="300" alt="Thumbnail" />
+    <img src="./media/bs1.png" width="300" alt="Thumbnail" />
+    <img src="./media/bs2.png" width="300" alt="Thumbnail" />
+    <img src="./media/bs3.png" width="300" alt="Thumbnail" />
+    <img src="./media/bs4.png" width="300" alt="Thumbnail" />
+    <img src="./media/bs5.png" width="300" alt="Thumbnail" />
+    <img src="./media/bs6.png" width="300" alt="Thumbnail" />
+    <img src="./media/bs7.png" width="300" alt="Thumbnail" />
+    <img src="./media/bs8.png" width="300" alt="Thumbnail" />
+    <img src="./media/bs9.png" width="300" alt="Thumbnail" />
 </details>
 <p></p>
 
