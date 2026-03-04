@@ -22,6 +22,11 @@ Below is a brief overview of selected projects that have already been migrated. 
 A full-stack e-commerce platform designed and implemented from the ground up, modeling a production-oriented commerce system with secure authentication, transactional checkout, asynchronous payment processing, and administrative tooling.
 
 <details>
+    <summary><strong>Project ERD</strong></summary>
+    <img src="./media/ERD.png">
+</details>
+<p>
+<details>
     <summary><strong>Click to open a few preview images</strong></summary>
     <img src="./media/entry_page.png" width="300" alt="Thumbnail" />
     <img src="./media/category_and_price_filtering.png" width="300" alt="Thumbnail" />
@@ -33,7 +38,7 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
     <img src="./media/adminfeatures.png" width="300" alt="Thumbnail" />
     <img src="./media/admin_order_management.png" width="300" alt="Thumbnail" />
 </details>
-<p></p>
+<p>
 
 
 **Tech Stack**
