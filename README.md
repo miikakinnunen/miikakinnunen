@@ -121,10 +121,11 @@ The project was completed in total of **six phases**, each building on the last.
 | Category | Tools |
 |----------|-------|
 | Provisioning | Vagrant, Ansible |
-| Virtualization | VirtualBox / VMware |
+| Virtualization | VirtualBox |
 | OS | Ubuntu (Linux) |
 | Containerization | Docker |
-| CI/CD | Drone CI, Gitea, GitLab |
+| Container Registry | Docker Hub |
+| CI/CD | Drone CI, Gitea |
 | Package Management | Helm |
 | GitOps | ArgoCD, ArgoCD Image Updater, Argo Rollouts |
 | Security | UFW, Fail2Ban, Trivy, SSH hardening |
