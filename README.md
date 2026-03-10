@@ -110,6 +110,8 @@ A full-stack recommendation system built with Go and React, connecting users thr
 - Accessibility practices applied throughout the UI
 
 
+---
+
 ## ⚙️ DevOps Infrastructure Project
 
 This project simulates a real-world DevOps environment built from the ground up — from bare metal virtualization to a fully automated CI/CD pipeline with observability and container orchestration. Rather than focusing on a single application, the core value of this project lies in the **infrastructure, automation, and operational practices** surrounding it.
