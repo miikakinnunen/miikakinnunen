@@ -97,7 +97,7 @@ A full-stack recommendation system built with Go and React, connecting users thr
 * Frontend: React (JavaScript)
 * Database: PostgreSQL with `cube` + `earthdistance` extensions
 * Real-time: WebSockets (GraphQL subscriptions + chat channel)
-* Security: JWT, brcypt
+* Security: JWT, brcrypt
 * Containerization: Docker + Docker Compose
 
 **Highlights**
@@ -131,7 +131,7 @@ The project was completed in total of **six phases**, each building on the last.
 | Security | UFW, Fail2Ban, Trivy, SSH hardening |
 | Performance Testing | Artillery, Locust |
 | Monitoring | Prometheus, Grafana, Alertmanager |
-| Logging | ELK Stack, Loki, Promtail |
+| Logging | ELK Stack (Phases 2-3), EFK Stack (Phases 4-5), Loki, Promtail (Phase 6) |
 | Orchestration | Kubernetes (Minikube) |
 | Cloud Platforms | AWS, GCP (cost analysis) |
 
@@ -271,11 +271,11 @@ With the application running in Kubernetes, the next step was to introduce prope
 
 A **custom Helm chart** was created for the application, bundling backend and frontend Deployments, Services, and ConfigMaps into a single reusable package. Templating was used to make image versions, resource limits, and environment variables easily configurable.
 
-A production database (PostgreSQL) was also deployed using an **existing Helm chart** from a public registry, with persistent storage configured and a Kubernetes Job used to verify connectivity and functionality post-deployment.
+A production database (PostgreSQL) was also deployed using an **existing Helm chart** from a public registry, with persistent storage configured and a Kubernetes Job used to verify connectivity and functionality post-deployment with credentials managed by **HashiCorp Vault**.
 
 ### HashiCorp Vault
 
-**HashiCorp Vault** was deployed into the cluster as well, providing a dedicated secrets management layer so that sensitive credentials never appear in Git or Kubernetes Secrets in plaintext.
+**HashiCorp Vault** was deployed into dedicated `vault` namespace, providing a secrets management layer so that sensitive credentials never appear in Git or Kubernetes Secrets in plaintext.
 
 The setup involved several moving parts:
 
