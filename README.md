@@ -10,7 +10,7 @@ Below is a brief overview of selected projects that have already been migrated. 
 - **Backend:** Django, Node.js (Express), RESTful API Design, WebSockets, Celery, Redis
 - **Frontend:** Vue.js, React,  SPAs, State Management, HTML5, CSS3, Tailwind CSS
 - **Databases & Messaging:** PostgreSQL, MySQL, SQLite, RabbitMQ, Relational Data Modeling
-- **DevOps & Platform:** Docker, Infrastructure as Code (IaC), Nginx, CI/CD pipelines, Linux, Kubernetes, Helm, ArgoCD, Vagrant, Ansible
+- **DevOps & Platform:** Docker, Infrastructure as Code (IaC), Terraform, Ansible, Nginx, CI/CD pipelines, Linux, Kubernetes, AWS, Azure, Helm, ArgoCD, Vagrant
 - **Quality & Metrics:** Prometheus, Grafana, ELK, PyTest, Jest, k6, Locust
 - **Security & Identity:** JWT (refresh token rotation), TLS, OAuth2, 2FA, RBAC, rate limiting
 
@@ -46,7 +46,7 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
 * Backend: Python, Django
 * Frontend: Vue, TypeScript, Tailwind CSS
 * Database: PostgreSQL
-* Infrastructure: Docker, RabbitMQ, Celery
+* Infrastructure: Docker, RabbitMQ, Celery, Terraform
 * Testing: PyTest, k6
 
 **Architectural Highlights**
@@ -60,6 +60,7 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
 - Role-based access control (RBAC) for admin operations
 - Rate limiting and input validation for API protection
 - Observability stack using ELK
+- Application deployed to Microsoft Azure using Terraform
 
 **Testing & Performance**
 
