@@ -21,9 +21,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.55227273"
-     inkscape:cx="631.93416"
-     inkscape:cy="160.24691"
+     inkscape:zoom="1.1045455"
+     inkscape:cx="265.26749"
+     inkscape:cy="511.06996"
      inkscape:window-width="2487"
      inkscape:window-height="1417"
      inkscape:window-x="1985"
@@ -273,14 +273,14 @@
      id="line14" />
   <!-- nginx container -->
   <rect
-     x="96"
-     y="363.6214"
-     width="278"
-     height="50"
-     rx="5"
+     x="96.015831"
+     y="363.63724"
+     width="277.96832"
+     height="54.042412"
+     rx="4.9994307"
      fill="#a3cfbb"
      stroke="#198754"
-     stroke-width="0.8"
+     stroke-width="0.831663"
      id="rect14" />
   <text
      x="235"
@@ -305,24 +305,17 @@
      fill="#0a3622"
      id="text17">try_files for Vue Router  ·  gzip  ·  cache headers</text>
   <text
-     x="235"
-     y="436"
+     x="239.07408"
+     y="432.34567"
      text-anchor="middle"
-     font-size="10"
-     fill="#0a3622"
-     id="text18">Docker image: miikakin/ecommerce-frontend:latest</text>
-  <text
-     x="235"
-     y="450"
-     text-anchor="middle"
-     font-size="10"
+     font-size="10px"
      fill="#0a3622"
      id="text19">Multi-stage build: Node→Vite build→Nginx</text>
   <text
-     x="235"
-     y="470"
+     x="233.1893"
+     y="447.81894"
      text-anchor="middle"
-     font-size="10"
+     font-size="10px"
      fill="#6c757d"
      id="text20">Public IP: frontend-pip (SSH only)</text>
   <!-- ================================================================ -->
@@ -344,10 +337,10 @@
      fill="#0a3622"
      id="text22">Standard_D2ads_v7  ·  Ubuntu 22.04  ·  Private IP: 10.0.1.4</text>
   <line
-     x1="445"
-     y1="352"
-     x2="805"
-     y2="352"
+     x1="444.22156"
+     y1="348.31897"
+     x2="804.22156"
+     y2="348.31897"
      stroke="#198754"
      stroke-width="0.8"
      id="line22" />
@@ -504,12 +497,12 @@
      xml:space="preserve"><tspan
        x="724.87244"
        y="432.32922"
-       id="tspan1">celery -A config beat ·<tspan
+       id="tspan5">celery -A config beat ·<tspan
    y="432.32922"
-   id="tspan2"> </tspan></tspan><tspan
+   id="tspan6"> </tspan></tspan><tspan
        x="724.87244"
        y="444.82923"
-       id="tspan3">periodic task scheduler</tspan></text>
+       id="tspan7">periodic task scheduler</tspan></text>
   <!-- docker network label -->
   <rect
      x="444.1893"
@@ -548,7 +541,7 @@
      xml:space="preserve"><tspan
        x="625"
        y="608"
-       id="tspan4">Settings: config.settings.production</tspan></text>
+       id="tspan8">Settings: config.settings.production</tspan></text>
   <text
      x="630.16693"
      y="576.38416"
@@ -723,8 +716,8 @@
   <!-- AZURE BLOB STORAGE -->
   <!-- ================================================================ -->
   <rect
-     x="74.605118"
-     y="716.35571"
+     x="77.321167"
+     y="714.54498"
      width="340"
      height="88"
      rx="8"
@@ -977,7 +970,7 @@
      y="429.1358"
      id="text79"><tspan
        sodipodi:role="line"
-       id="tspan79"></tspan></text>
+       id="tspan79" /></text>
   <path
      style="fill:#ffd42a;stroke:#ffd42a;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
      d="m 440.90535,499.75309 -204.60905,40.74074 2.71605,-0.90535"
