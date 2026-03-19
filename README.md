@@ -17,7 +17,15 @@ Below is a brief overview of selected projects that have already been migrated. 
 
 # 🗂️ Projects
 
-## 🛒 E-commerce platform
+* [🛒 E-commerce Platform](#-e-commerce-platform)
+<p>
+
+* [🗺️ Interest-Based Geospatial Matching Platform](#️-interest-based-geospatial-matching-platform)
+<p>
+
+* [⚙️ DevOps Infrastructure Project](#️-devops-infrastructure-project)
+
+## 🛒 E-commerce Platform
 
 A full-stack e-commerce platform designed and implemented from the ground up, modeling a production-oriented commerce system with secure authentication, transactional checkout, asynchronous payment processing, and administrative tooling.
 
