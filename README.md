@@ -27,6 +27,11 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
 </details>
 <p>
 <details>
+    <summary><strong>🌐 Microsoft Azure Architecture</strong></summary>
+    <img src="./media/architecture.svg">
+</details>
+<p>
+<details>
     <summary><strong>📸 Click to open a few preview images</strong></summary>
     <img src="./media/entry_page.png" width="300" alt="Thumbnail" />
     <img src="./media/category_and_price_filtering.png" width="300" alt="Thumbnail" />
@@ -48,6 +53,7 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
 * Database: PostgreSQL
 * Infrastructure: Docker, RabbitMQ, Celery, Terraform
 * Testing: PyTest, k6
+<p>
 
 **Architectural Highlights**
 
@@ -59,8 +65,7 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
 - Background task processing with Celery
 - Role-based access control (RBAC) for admin operations
 - Rate limiting and input validation for API protection
-- Observability stack using ELK
-- Application deployed to Microsoft Azure using Terraform
+<p>
 
 **Testing & Performance**
 
@@ -69,6 +74,19 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
 - Transaction and stress testing for checkout consistency
 - WCAG 2.1 Level A accessibility compliance
 - SEO best practices applied
+<p>
+
+**Cloud Deployment — Microsoft Azure**
+
+- Infrastructure provisioned with Terraform (IaC) across 10+ Azure resources
+- Application Gateway (Standard_v2) for SSL termination and path-based routing
+- Separated frontend VM (Nginx + built Vue) and backend VM (Nginx + Gunicorn + Django)
+- Managed PostgreSQL Flexible Server in a private subnet with VNet integration
+- Azure Cache for Redis via private endpoint — no public internet exposure
+- Azure Blob Storage for media files via django-storages
+- Dedicated gateway subnet isolating Application Gateway from VM traffic
+- Docker Compose orchestrating five containers on the backend VM
+- Multi-stage frontend Dockerfile — Node builds Vue to static files, Nginx serves them
 
 
 
@@ -100,6 +118,7 @@ A full-stack recommendation system built with Go and React, connecting users thr
 * Real-time: WebSockets (GraphQL subscriptions + chat channel)
 * Security: JWT, brcrypt
 * Containerization: Docker + Docker Compose
+<p>
 
 **Highlights**
 
@@ -147,12 +166,12 @@ The project was completed in total of **six phases**, each building on the last.
     <summary><strong>📐 VM Architecture (Phases 1-3)</strong></summary>
     <img src="./media/VM-arch.png"  />
 </details>
-
+<p>
 <details>
     <summary><strong>☸️ K8s Architecture (Phases 4-5)</strong></summary>
     <img src="./media/k8s-arch.png"  />
 </details>
-
+<p>
 <details>
     <summary><strong>📋 Phases 1-6 Breakdown</strong></summary>
     
