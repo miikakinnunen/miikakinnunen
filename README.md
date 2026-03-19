@@ -59,7 +59,7 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
 * Backend: Python, Django
 * Frontend: Vue, TypeScript, Tailwind CSS
 * Database: PostgreSQL
-* Infrastructure: Docker, RabbitMQ, Celery, Terraform
+* Cloud & Infrastructure: Microsoft Azure, Terraform, Docker, RabbitMQ, Celery
 * Testing: PyTest, k6
 <p>
 
