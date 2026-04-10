@@ -29,6 +29,8 @@ Below is a brief overview of selected projects that have already been migrated. 
 
 A full-stack e-commerce platform designed and implemented from the ground up, modeling a production-oriented commerce system with secure authentication, transactional checkout, asynchronous payment processing, and administrative tooling.
 
+### Preview Images
+
 <details>
     <summary><strong>🗃️ Project ERD</strong></summary>
     <img src="./media/ERD.png">
@@ -103,6 +105,8 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
 ## 🗺️ Interest-Based Geospatial Matching Platform
 
 A full-stack social matching platform built with Go and React, connecting gamers through both a custom weighted recommendation algorithm and AI-powered semantic profile matching. The platform combines geospatial proximity filtering, strict access control, prioritized recommendations, and real-time communication.
+
+### Preview Images
 
 <details>
     <summary><strong>📸 Click to open a few preview images</strong></summary>
