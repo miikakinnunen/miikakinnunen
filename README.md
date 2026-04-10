@@ -102,7 +102,7 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
 
 ## 🗺️ Interest-Based Geospatial Matching Platform
 
-A full-stack recommendation system built with Go and React, connecting users through a custom weighted matching algorithm and geospatial proximity filtering. The platform combines strict access control, prioritized recommendations, and real-time communication.
+A full-stack social matching platform built with Go and React, connecting gamers through both a custom weighted recommendation algorithm and AI-powered semantic profile matching. The platform combines geospatial proximity filtering, strict access control, prioritized recommendations, and real-time communication.
 
 <details>
     <summary><strong>📸 Click to open a few preview images</strong></summary>
@@ -122,7 +122,8 @@ A full-stack recommendation system built with Go and React, connecting users thr
 
 * Backend: Go, GraphQL
 * Frontend: React (JavaScript)
-* Database: PostgreSQL with `cube` + `earthdistance` extensions
+* Database: PostgreSQL with `cube`, `earthdistance` and `pgvector`
+* AI Matching: Ollama embeddings + vector similarity search
 * Real-time: WebSockets (GraphQL subscriptions + chat channel)
 * Security: JWT, brcrypt
 * Containerization: Docker + Docker Compose
@@ -131,7 +132,8 @@ A full-stack recommendation system built with Go and React, connecting users thr
 **Highlights**
 
 - Hybrid API architecture (REST + GraphQL with subscriptions)
-- Custom recommendation engine using 5+ weighted profile attributes
+- Dual recommendation modes: rule-based matching algorithm plus AI-powered semantic recommendations
+- Profile embeddings generated from user bios and interests for smarter match discovery
 - Radius-based proximity filtering via PostgreSQL `earthdistance`
 - WebSocket-powered real-time chat with typing indicators and unread tracking
 - Connection-based profile visibility and strict authorization boundaries
