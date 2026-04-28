@@ -24,6 +24,10 @@ Below is a brief overview of selected projects that have already been migrated. 
 <p>
 
 * [⚙️ DevOps Infrastructure Project](#️-devops-infrastructure-project)
+<p>
+
+* [🚀 SpaceRace Game](#-spacerace-game)
+
 
 ## 🛒 E-commerce Platform
 
@@ -426,3 +430,36 @@ A separate risk assessment and management plan was produced covering budget aler
 
 This project spans the full arc of a modern DevOps journey — from hand-configuring virtual machines and hardening Linux servers, through containerized CI/CD pipelines, all the way to GitOps-driven deployments and production-grade cloud cost planning. Every phase built directly on the last, and every tooling decision was made deliberately with security, scalability, and operational best practices in mind.
 </details>
+
+---
+
+## 🚀 SpaceRace Game
+
+A browser-based multiplayer space dodge game built with Node.js, Express, Socket.IO, and vanilla frontend technologies. Players pilot spaceships, dodge incoming meteors, collect power-ups, and compete to survive the longest, with support for both online multiplayer sessions and offline bot matches.
+
+**Tech Stack**
+
+* Backend: Node.js, Express
+* Real-time communication: Socket.IO
+* Frontend: JavaScript, HTML5, CSS3
+* Rendering: DOM-based game objects with SVG assets
+* Audio: Browser Audio API
+* Development tooling: Nodemon
+<p>
+
+**Highlights**
+
+- Real-time multiplayer game state synchronization over WebSockets
+- Host-based lobby flow with start, pause, reset, and quit controls
+- Offline mode with configurable AI bot opponents and difficulty settings
+- Collectible power-ups that grant player buffs or hinder opponents
+- Limited-ammo shooting mechanic layered on top of dodge gameplay
+- Lightweight architecture with no frontend framework or build pipeline
+
+**Gameplay Features**
+
+- Four selectable spaceship avatars
+- Falling meteors and collectible star power-ups
+- Three-life elimination format
+- Keyboard controls for movement, firing, and pausing
+- Browser-based local hosting that can be shared externally through tunneling tools such as ngrok
