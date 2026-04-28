@@ -1,0 +1,45 @@
+# .continue/config.yaml (Project-specific)
+name: Project Config - Miika Profile
+version: 1.0.0
+
+# This tells Continue to add these tools to your Global ones
+mergeBehavior: merge
+
+mcpServers:
+  # 1. Git - Scoped to the current directory
+  - name: Git
+    command: wsl.exe
+    args:
+      - --
+      - /home/miika/.local/bin/uvx
+      - mcp-server-git@2025.12.18
+      - --repository
+      - . # Refers to the current workspace root
+    env:
+      PATH: "/home/miika/.local/bin:/usr/local/bin:/usr/bin:/bin"
+
+  # 2. Filesystem - Scoped to the current directory
+  - name: Filesystem
+    command: wsl.exe
+    args:
+      - --
+      - /home/miika/.nvm/versions/node/v20.19.5/bin/node
+      - /home/miika/.nvm/versions/node/v20.19.5/lib/node_modules/@modelcontextprotocol/server-filesystem/dist/index.js
+      - . # Restricts file access to this repo only
+    env:
+      PATH: "/home/miika/.nvm/versions/node/v20.19.5/bin:/usr/local/bin:/usr/bin:/bin"
+
+  # 3. Memory - Local graph so it doesn't leak into other projects
+  - name: Memory
+    command: wsl.exe
+    args:
+      - --
+      - /home/miika/.nvm/versions/node/v20.19.5/bin/node
+      - /home/miika/.nvm/versions/node/v20.19.5/lib/node_modules/@modelcontextprotocol/server-memory/dist/index.js
+    env:
+      MEMORY_FILE_PATH: "./.continue/memory.json"
+      PATH: "/home/miika/.nvm/versions/node/v20.19.5/bin:/usr/local/bin:/usr/bin:/bin"
+
+# You can also add project-specific rules here
+rules:
+  - This is my personal profile site; keep the tone professional but creative.

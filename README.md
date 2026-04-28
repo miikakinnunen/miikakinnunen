@@ -46,7 +46,7 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
 </details>
 <p>
 <details>
-    <summary><strong>📸 Click to open a few preview images</strong></summary>
+    <summary><strong>📸 Click to open a preview images</strong></summary>
     <img src="./media/entry_page.png" width="300" alt="Thumbnail" />
     <img src="./media/category_and_price_filtering.png" width="300" alt="Thumbnail" />
     <img src="./media/book_details_and_reviews.png" width="300" alt="Thumbnail" />
@@ -113,7 +113,7 @@ A full-stack social matching platform built with Go and React, connecting gamers
 ### Preview Images
 
 <details>
-    <summary><strong>📸 Click to open a few preview images</strong></summary>
+    <summary><strong>📸 Click to open a preview images</strong></summary>
     <img src="./media/gm1.png" width="300" alt="Thumbnail" />
     <img src="./media/gm2.png" width="300" alt="Thumbnail" />
     <img src="./media/gm3.png" width="300" alt="Thumbnail" />
@@ -437,6 +437,13 @@ This project spans the full arc of a modern DevOps journey — from hand-configu
 
 A browser-based multiplayer space dodge game built with Node.js, Express, Socket.IO, and vanilla frontend technologies. Players pilot spaceships, dodge incoming meteors, collect power-ups, and compete to survive the longest, with support for both online multiplayer sessions and offline bot matches.
 
+<details>
+    <summary><strong>📸 Click to open a preview images</strong></summary>
+    <img src="./media/SpaceRace1.png" width="300" alt="Thumbnail" />
+    <img src="./media/SpaceRace2.png" width="300" alt="Thumbnail" />
+</details>
+<p></p>
+
 **Tech Stack**
 
 * Backend: Node.js, Express
@@ -463,3 +470,26 @@ A browser-based multiplayer space dodge game built with Node.js, Express, Socket
 - Three-life elimination format
 - Keyboard controls for movement, firing, and pausing
 - Browser-based local hosting that can be shared externally through tunneling tools such as ngrok
+
+**Bot Logic Summary**
+
+* **Core Logic:**
+
+    * Bots move at 60 FPS maximum and check for falling object collisions
+    * When in danger, bots move away using vector math
+    * High skill bots (≥90) chase powerups instead of avoiding them
+    * Highly skilled bots (≥120) with ammo shoot projectiles to defend themselves
+
+* **Movement:**
+
+    * Safe movement toward random destinations
+    * New destinations generated when current target reached
+    * Boundary constraints enforced
+
+* **Skill Levels:**
+
+    * Solo: Low skill, basic avoidance
+    * Luke: Medium skill, chases nearby powerups
+    * Anakin: High skill, aggressive powerup chasing and 5-round ion cannon
+
+The bots act as automated players focused on survival through avoidance and strategic weapon use, with behavior scaling by skill level.
