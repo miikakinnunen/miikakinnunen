@@ -27,6 +27,10 @@ Below is a brief overview of selected projects that have already been migrated. 
 <p>
 
 * [🚀 SpaceRace Game](#-spacerace-game)
+<p>
+
+* [📈 AI Research Automation — n8n Workflow](#-ai-research-automation--n8n-workflow)
+<p>
 
 
 ## 🛒 E-commerce Platform
@@ -493,3 +497,33 @@ A browser-based multiplayer space dodge game built with Node.js, Express, Socket
     * Anakin: High skill, aggressive powerup chasing and 5-round ion cannon
 
 The bots act as automated players focused on survival through avoidance and strategic weapon use, with behavior scaling by skill level.
+
+
+---
+
+
+## 🔬 AI Research Automation — n8n Workflow
+
+An end-to-end n8n workflow that turns a plain-language research subject into a fully structured, Notion-formatted knowledge page — powered by LLMs via OpenRouter with no manual steps in between.
+
+<img src="./media/ai-researcher-template.png" />
+
+### How It Works
+
+A chat message triggers the pipeline. A planning model first decides which topics and headings are appropriate for the given subject. A second model then researches each topic and produces structured JSON. A third model refines and formats the content using Notion-compatible Markdown. The result is chunked into 100-block batches and written to a Notion database page via PATCH requests, with tags and a summary pushed to the page properties. An Gmail notification fires on completion.
+
+**Tech Stack**
+- Orchestration: n8n
+- LLM provider: OpenRouter (multi-model — topic planner, researcher, refiner)
+- Output: Notion API (database page + block content via PATCH)
+- Notification: Gmail (optional, disabled)
+- Language: JavaScript (n8n Code nodes)
+
+**Workflow Highlights**
+- Three-stage LLM pipeline: topic planning → deep research → Notion-aware refinement
+- Dynamic JSON schema detection — auto-selects Notion block types (callout, heading, bullet, code, comparison, timeline, metrics) based on content shape
+- Inline Markdown parser converts bold, code, italic, blockquotes, and fenced code blocks into Notion rich_text annotations
+- Chunked PATCH loop handles Notion's 100-block-per-request limit without manual intervention
+- Sanitisation layer on every LLM response strips `<think>` tags, code fences, smart quotes, and control characters before JSON parsing
+- Tags rendered as inline `code`-annotated rich text; references, summary, and conclusion handled as special-cased sections
+- Gmail step is wired but disabled — trivially re-enabled for email delivery on completion
