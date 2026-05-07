@@ -521,9 +521,7 @@ A chat message triggers the pipeline. A planning model first decides which topic
 
 **Workflow Highlights**
 - Three-stage LLM pipeline: topic planning → deep research → Notion-aware refinement
+- Sanitisation layer on every LLM response strips `<think>` tags, code fences, smart quotes, and control characters before JSON parsing
 - Dynamic JSON schema detection — auto-selects Notion block types (callout, heading, bullet, code, comparison, timeline, metrics) based on content shape
 - Inline Markdown parser converts bold, code, italic, blockquotes, and fenced code blocks into Notion rich_text annotations
 - Chunked PATCH loop handles Notion's 100-block-per-request limit without manual intervention
-- Sanitisation layer on every LLM response strips `<think>` tags, code fences, smart quotes, and control characters before JSON parsing
-- Tags rendered as inline `code`-annotated rich text; references, summary, and conclusion handled as special-cased sections
-- Gmail step is wired but disabled — trivially re-enabled for email delivery on completion
