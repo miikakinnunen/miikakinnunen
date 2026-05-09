@@ -504,24 +504,31 @@ The bots act as automated players focused on survival through avoidance and stra
 
 ## 🔬 AI Research Automation — n8n Workflow
 
-An end-to-end n8n workflow that turns a plain-language research subject into a fully structured, Notion-formatted knowledge page — powered by LLMs via OpenRouter with no manual steps in between.
+An end-to-end n8n workflow that turns a plain-language research subject (or a set of URLs) into a fully structured, fact-checked, Notion-formatted knowledge page — powered by a multi-agent LLM pipeline via OpenRouter with no manual steps in between.
 
 <img src="./media/ai-researcher-template.png" />
 
 ### How It Works
 
-A chat message triggers the pipeline. A planning model first decides which topics and headings are appropriate for the given subject. A second model then researches each topic and produces structured JSON. A third model refines and formats the content using Notion-compatible Markdown. The result is chunked into 100-block batches and written to a Notion database page via PATCH requests, with tags and a summary pushed to the page properties. An Gmail notification fires on completion.
+A chat message triggers the pipeline. The workflow first detects whether the input contains URLs or is a pure text subject, then runs a Brave web search to discover up to four credible sources. All sources are fetched in parallel, stripped of HTML boilerplate, and trimmed to a usable content window.
+
+A planning model decides the topic structure and headings appropriate for the subject. A researcher model then processes **each source independently**, producing a structured JSON report per URL. Each report is passed to a dedicated **fact-checker** that removes any claim it cannot directly verify against the originating source content. Once all fact-checks complete, a **unifier model** merges the parallel reports into a single coherent JSON, resolving conflicts against the raw source material. A final **formatter model** applies Notion-compatible Markdown. The result is chunked into 100-block batches and written to a Notion database page via PATCH requests, with tags and a summary pushed to the page properties. A Gmail notification fires on completion.
 
 **Tech Stack**
 - Orchestration: n8n
-- LLM provider: OpenRouter (multi-model — topic planner, researcher, refiner)
+- LLM provider: OpenRouter (multi-model — topic planner, researcher, fact-checker, unifier, formatter)
+- Source discovery: Brave Search API
 - Output: Notion API (database page + block content via PATCH)
-- Notification: Gmail (optional, disabled)
+- Notification: Gmail
 - Language: JavaScript (n8n Code nodes)
 
 **Workflow Highlights**
-- Three-stage LLM pipeline: topic planning → deep research → Notion-aware refinement
-- Sanitisation layer on every LLM response strips `<think>` tags, code fences, smart quotes, and control characters before JSON parsing
+- **Five-stage LLM pipeline:** topic planning → parallel per-source research → per-source fact-checking → multi-source unification → Notion-aware formatting
+- **Brave search integration** automatically discovers up to four credible sources from any text subject; user-supplied URLs are merged and deduplicated into the same pool
+- **Parallel researcher agents** — one LLM call per source URL, each strictly confined to its own fetched content, preventing cross-source hallucination
+- **Dedicated fact-checker per source** strips unsupported claims before they reach the unification stage; removed claims are logged in a `removed_sections` key for auditability
+- **Conflict-aware unifier** cross-references all fact-checked reports against raw source material when accounts differ, rather than blindly concatenating
+- Sanitisation layer on every LLM response strips `<think>` tags, code fences, smart quotes, and control characters before JSON parsing, with three successive fallback strategies before hard failure
 - Dynamic JSON schema detection — auto-selects Notion block types (callout, heading, bullet, code, comparison, timeline, metrics) based on content shape
 - Inline Markdown parser converts bold, code, italic, blockquotes, and fenced code blocks into Notion rich_text annotations
 - Chunked PATCH loop handles Notion's 100-block-per-request limit without manual intervention
