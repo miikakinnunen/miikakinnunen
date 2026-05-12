@@ -506,13 +506,33 @@ The bots act as automated players focused on survival through avoidance and stra
 
 An end-to-end n8n workflow that turns a plain-language research subject (or a set of URLs) into a fully structured, fact-checked, Notion-formatted knowledge page — powered by a multi-agent LLM pipeline via OpenRouter with no manual steps in between.
 
-<img src="./media/ai-researcher-template.png" />
+
 
 ### How It Works
+
+
+**Version 1**
 
 A chat message triggers the pipeline. The workflow first detects whether the input contains URLs or is a pure text subject, then runs a Brave web search to discover up to four credible sources. All sources are fetched in parallel, stripped of HTML boilerplate, and trimmed to a usable content window.
 
 A **planning model** decides the topic structure and headings appropriate for the subject. A researcher model then processes **each source independently**, producing a structured JSON report per URL. Each report is passed to a dedicated **fact-checker** that removes any claim it cannot directly verify against the originating source content. Once all fact-checks complete, a **unifier model** merges the parallel reports into a single coherent JSON, resolving conflicts against the raw source material. A final **formatter model** applies Notion-compatible Markdown. The result is chunked into 100-block batches and written to a Notion database page via PATCH requests, with tags and a summary pushed to the page properties. A Gmail notification fires on completion.
+
+
+<img src="./media/ai-researcher-template.png" />
+<p>
+
+**Version 2**
+
+Version 2 rethinks the research hierarchy. In Version 1, topic structure and content were derived from scraped web pages — meaning the quality of the research was bottlenecked by whatever HTML could be successfully fetched and stripped. Version 2 inverts this: a `perplexity/sonar` model runs first, conducting live web-grounded research and defining both the topic structure and the base content from scratch. The scraped sources are then treated as **enrichment material** — each is read by a dedicated enricher model that extracts only information genuinely absent from the base research, ignoring anything already covered. A final merge model deduplicates across enrichments and folds the additions into the Perplexity foundation.
+
+The practical effect is that the research report is no longer dependent on which pages happened to be scrapeable — paywalled, JS-rendered, or bot-blocked URLs no longer degrade the output. The Perplexity base always provides a complete, coherent foundation, and scraped sources can only add depth, never subtract it.
+
+
+<img src="./media/ai-researcher-perplexity-base.png" />
+<p>
+
+---
+
 
 **Tech Stack**
 - Orchestration: n8n
