@@ -32,6 +32,9 @@ Below is a brief overview of selected projects that have already been migrated. 
 * [📈 AI Research Automation — n8n Workflow](#-ai-research-automation--n8n-workflow)
 <p>
 
+* [🎬 Video Creator](#-video-creator)
+<p>
+
 
 ## 🛒 E-commerce Platform
 
@@ -552,3 +555,29 @@ The practical effect is that the research report is no longer dependent on which
 - Dynamic JSON schema detection — auto-selects Notion block types (callout, heading, bullet, code, comparison, timeline, metrics) based on content shape
 - Inline Markdown parser converts bold, code, italic, blockquotes, and fenced code blocks into Notion rich_text annotations
 - Chunked PATCH loop handles Notion's 100-block-per-request limit without manual intervention
+
+---
+
+## 🎬 Video Creator 
+
+A local-first TypeScript application for producing factual news videos from inspectable project folders. It models the production workflow end to end: source capture, AI-assisted editorial artifacts, human approvals, narration and captions, frozen render packages, deterministic local rendering, automated quality evidence, and explicit publish review.
+
+**Tech Stack**
+
+* Backend: Node.js, TypeScript, Fastify
+* Frontend: React, Vite, TypeScript, CSS
+* Video Rendering: HyperFrames, FFmpeg, FFprobe
+* Narration & Captions: Kokoro local TTS, speech alignment, SRT/VTT exports
+* Testing: Vitest, Playwright
+<p>
+
+**Highlights**
+
+- Local project workspaces preserve source material, assets, approvals, artifacts, render attempts, logs, and outputs as inspectable files.
+- Editorial work is imported as one validated research brief, script, storyboard, and source-claims-map bundle, keeping important script claims traceable to source evidence.
+- Human approvals are tied to exact content hashes; upstream changes mark dependent narration, captions, packages, and renders stale instead of silently reusing them.
+- A canonical production timeline reconciles approved editorial content, verified narration duration, aligned phrase/word timing, caption exports, and storyboard scene allocation.
+- Codex authors immutable `video-render-package.v1` candidates externally, while the application validates member hashes and upstream identities, supports review/approval, and renders only the exact approved package.
+- Deterministic local rendering uses HyperFrames and FFmpeg with explicit browser, media-tool, asset, and disk-space preflight checks.
+- Quality review distinguishes a technical render, an automated review candidate, and a human-approved publish candidate; reports, representative frames, baselines, warnings, and decisions stay tied to exact output identities.
+- The responsive operator workspace keeps all seven stages inspectable, surfaces recovery guidance, and provides safe playback, captions, downloads, and project-relative output paths without exposing arbitrary filesystem files.
