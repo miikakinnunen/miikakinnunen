@@ -43,17 +43,17 @@ A full-stack e-commerce platform designed and implemented from the ground up, mo
 ### Preview Images
 
 <details>
-    <summary><strong>🗃️ Project ERD</strong></summary>
+    <summary><strong>🟦 View project ERD — click to expand</strong></summary>
     <img src="./media/ERD.png">
 </details>
 <p>
 <details>
-    <summary><strong>🌐 Microsoft Azure Architecture</strong></summary>
+    <summary><strong>🟦 View Microsoft Azure architecture — click to expand</strong></summary>
     <img src="./media/architecture.svg">
 </details>
 <p>
 <details>
-    <summary><strong>📸 Click to open a preview images</strong></summary>
+    <summary><strong>🟦 View project screenshots — click to expand</strong></summary>
     <img src="./media/entry_page.png" width="300" alt="Thumbnail" />
     <img src="./media/category_and_price_filtering.png" width="300" alt="Thumbnail" />
     <img src="./media/book_details_and_reviews.png" width="300" alt="Thumbnail" />
@@ -120,7 +120,7 @@ A full-stack social matching platform built with Go and React, connecting gamers
 ### Preview Images
 
 <details>
-    <summary><strong>📸 Click to open a preview images</strong></summary>
+    <summary><strong>🟦 View project screenshots — click to expand</strong></summary>
     <img src="./media/gm1.png" width="300" alt="Thumbnail" />
     <img src="./media/gm2.png" width="300" alt="Thumbnail" />
     <img src="./media/gm3.png" width="300" alt="Thumbnail" />
@@ -188,17 +188,17 @@ The project was completed in total of **six phases**, each building on the last.
 
 **Click to open** the architecture pictures and full breakdown of phases.
 <details>
-    <summary><strong>📐 VM Architecture (Phases 1-3)</strong></summary>
+    <summary><strong>🟦 View VM architecture (Phases 1–3) — click to expand</strong></summary>
     <img src="./media/VM-arch.png"  />
 </details>
 <p>
 <details>
-    <summary><strong>☸️ K8s Architecture (Phases 4-5)</strong></summary>
+    <summary><strong>🟦 View Kubernetes architecture (Phases 4–5) — click to expand</strong></summary>
     <img src="./media/k8s-arch.png"  />
 </details>
 <p>
 <details>
-    <summary><strong>📋 Phases 1-6 Breakdown</strong></summary>
+    <summary><strong>🟦 View project details (Phases 1–6) — click to expand</strong></summary>
     
 ## 🖥️ Phase 1 — Virtual Infrastructure & Linux Hardening
 
@@ -445,7 +445,7 @@ This project spans the full arc of a modern DevOps journey — from hand-configu
 A browser-based multiplayer space dodge game built with Node.js, Express, Socket.IO, and vanilla frontend technologies. Players pilot spaceships, dodge incoming meteors, collect power-ups, and compete to survive the longest, with support for both online multiplayer sessions and offline bot matches.
 
 <details>
-    <summary><strong>📸 Click to open a preview images</strong></summary>
+    <summary><strong>🟦 View project screenshots — click to expand</strong></summary>
     <img src="./media/SpaceRace1.png" width="300" alt="Thumbnail" />
     <img src="./media/SpaceRace2.png" width="300" alt="Thumbnail" />
 </details>
@@ -560,7 +560,7 @@ The practical effect is that the research report is no longer dependent on which
 
 ## 🎬 Video Creator 
 
-A local-first TypeScript application for producing factual news videos from inspectable project folders. It models the production workflow end to end: source capture, AI-assisted editorial artifacts, human approvals, narration and captions, frozen render packages, deterministic local rendering, automated quality evidence, and explicit publish review.
+A local-first video production application that turns a topic and captured sources into a narrated, captioned explainer video. A browser-based workspace guides the process from source research and AI-assisted scripting to storyboard review, scene images, local rendering, and downloading the finished video and subtitles.
 
 **Tech Stack**
 
@@ -573,11 +573,11 @@ A local-first TypeScript application for producing factual news videos from insp
 
 **Highlights**
 
-- Local project workspaces preserve source material, assets, approvals, artifacts, render attempts, logs, and outputs as inspectable files.
-- Editorial work is imported as one validated research brief, script, storyboard, and source-claims-map bundle, keeping important script claims traceable to source evidence.
-- Human approvals are tied to exact content hashes; upstream changes mark dependent narration, captions, packages, and renders stale instead of silently reusing them.
-- A canonical production timeline reconciles approved editorial content, verified narration duration, aligned phrase/word timing, caption exports, and storyboard scene allocation.
-- Codex authors immutable `video-render-package.v1` candidates externally, while the application validates member hashes and upstream identities, supports review/approval, and renders only the exact approved package.
-- Deterministic local rendering uses HyperFrames and FFmpeg with explicit browser, media-tool, asset, and disk-space preflight checks.
-- Quality review distinguishes a technical render, an automated review candidate, and a human-approved publish candidate; reports, representative frames, baselines, warnings, and decisions stay tied to exact output identities.
-- The responsive operator workspace keeps all seven stages inspectable, surfaces recovery guidance, and provides safe playback, captions, downloads, and project-relative output paths without exposing arbitrary filesystem files.
+- Source discovery and capture with reviewable evidence linking script claims back to their sources
+- AI-assisted research, scripts, storyboards, and visual compositions through external agent workflows
+- Human review and approval at each production stage, with affected steps marked for regeneration when inputs change
+- Scene image uploads with framing previews and attribution details
+- Local speech generation with synchronized captions and scene transitions aligned to narration
+- Preview and approval of visual compositions before local video rendering
+- Automated quality checks and human review before accepting the finished video for download
+- Resumable projects stored in local folders, preserving source material, assets, revisions, and outputs
